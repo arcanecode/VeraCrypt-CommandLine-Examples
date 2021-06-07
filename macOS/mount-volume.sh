@@ -1,4 +1,16 @@
 #----------------------------------------------------------------------------------------
+# Copyright Notice
+#
+# This document is Copyright (c) 2021 Robert C. Cain. All rights reserved.
+#
+# The code samples herein is for demonstration purposes. No warranty or guarantee 
+# is implied or expressly granted.
+#
+# This sample may not be reproduced in whole or in part without the express written
+# consent of the author. Information within can be used within your own projects.
+#----------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------
 # This example will show how to mount a VeraCrypt volume in macOS
 #
 # At the bottom is the full command in a single line. Here in the comments we'll break

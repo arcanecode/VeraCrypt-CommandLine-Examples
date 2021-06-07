@@ -1,4 +1,16 @@
 #----------------------------------------------------------------------------------------
+# Copyright Notice
+#
+# This document is Copyright (c) 2021 Robert C. Cain. All rights reserved.
+#
+# The code samples herein is for demonstration purposes. No warranty or guarantee 
+# is implied or expressly granted.
+#
+# This sample may not be reproduced in whole or in part without the express written
+# consent of the author. Information within can be used within your own projects.
+#----------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------
 # Getting a list of mounted volumes from the command line
 #
 # As with other commands you have seen, we start with the full path to the VeraCrypt
