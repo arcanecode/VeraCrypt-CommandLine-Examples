@@ -2,7 +2,9 @@
 
 ## Overview
 
-This section is still in development, please check back soon
+This set of files has examples to create, dismount, and mount VeraCrypt volumes in Windows.
+
+Note that the Windows version of VeraCrypt does not have a feature to list volumes.
 
 ---
 
