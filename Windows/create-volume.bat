@@ -13,7 +13,7 @@ REM
 REM The command to create a new volume is actually a seperate executable
 REM than the rest of VeraCrypt. It is VeraCrypt Format.exe
 REM Note there is indeed a space in the file name! Thus you have to enclose
-REM the enter thing in double quotes.
+REM the entire thing in double quotes.
 REM ---------------------------------------------------------------------------
 REM
 REM "C:\Program Files\VeraCrypt\VeraCrypt Format.exe"
@@ -30,7 +30,7 @@ REM
 REM /create "C:\temp\vctest.vc"
 
 REM ---------------------------------------------------------------------------
-REM We now noeed to tell VeraCrypt how big to make the volume. VeraCrypt
+REM We now need to tell VeraCrypt how big to make the volume. VeraCrypt
 REM includes shortcuts for M (Megabytes), G (Gigabytes), T (Terabytes) and
 REM K (Kilobytes). If you omit a letter, it assumes bytes.
 REM
@@ -42,13 +42,13 @@ REM /size "200M"
 
 REM ---------------------------------------------------------------------------
 REM Next up is the password to use to encrypt the volume. In a "real world"
-REM situation, you should probably pass it in or get it in an alternate
-REM method.
+REM situation, you should probably pass it in or get it into the script or
+REM get it using an alternate method.
 REM
-REM To this demo simple, I'm just going to embed the password using the
+REM To keep this demo simple, I'm just going to embed the password using the
 REM "super secure" password I've used throughout this series of blog posts.
 REM
-REM As with file names, if your password has spaces you'll need to encluse
+REM As with file names, if your password has spaces you'll need to enclose
 REM it in double quotes.
 REM ---------------------------------------------------------------------------
 REM
@@ -65,8 +65,8 @@ REM
 REM /encryption AES
 
 REM ---------------------------------------------------------------------------
-REM Many algorithms require you to provide an encryption stream. For AES,
-REM we'll use the strong SHA-512.
+REM Many algorithms require you to provide an encryption hashing method.
+REM For AES, we'll use the strong SHA-512.
 REM ---------------------------------------------------------------------------
 REM
 REM /hash sha-512
@@ -81,7 +81,7 @@ REM /filesystem exfat
 
 REM ---------------------------------------------------------------------------
 REM The PIM is a special number that allows you to specify the number of
-REM times hashing algorhythm executes. It's a bit more complex than that,
+REM times the hashing algorithm  executes. It's a bit more complex than that,
 REM if you want full details see the VeraCrypt documentation at:
 REM https://documentation.help/VeraCrypt/Personal%20Iterations%20Multiplier%20(PIM).html
 REM
@@ -90,6 +90,35 @@ REM ---------------------------------------------------------------------------
 REM
 REM /pim 0
 
+REM ---------------------------------------------------------------------------
+REM The final parameter is /silent. By default VeraCrypt will display dialogs
+REM notifying you of its progress, as well as when it is complete.
+REM
+REM In a scripting situation you would normally not want this, so we add the
+REM silent switch to suppress the messages.
+REM
+REM Note this does have one side affect, if there are any errors those too are
+REM also suppressed, so you won't be aware of them. The most common of these
+REM would be the attempt to create a volume name that already exists.
+REM ---------------------------------------------------------------------------
+REM
+REM /silent
+
 REM Here is the entire command as a single line.
 
-"C:\Program Files\VeraCrypt\VeraCrypt Format.exe" /create "C:\temp\vctest.vc" /size "200M" /password MySuperSecurePassword1! /encryption AES /hash sha-512 /filesystem exfat /pim 0
+"C:\Program Files\VeraCrypt\VeraCrypt Format.exe" /create "C:\temp\vctest.vc" /size "200M" /password MySuperSecurePassword1! /encryption AES /hash sha-512 /filesystem exfat /pim 0 /silent
+
+REM ---------------------------------------------------------------------------
+REM Note that there is one more parameter that we didn't use in the example,
+REM but you may want to know about: /force
+REM
+REM Normally, if you are trying to create a new volume and that file already
+REM exists, VeraCrypt will pop up a dialog (assuming you've not used /silent)
+REM warning you the volume you are trying to create already exists. It will
+REM  then give you the choice of canceling or overwriting the existing file.
+REM
+REM The /force parameter suppresses the message and always overwrites the file.
+REM To use it, simply add /force to the command above.
+REM ---------------------------------------------------------------------------
+REM
+REM /force

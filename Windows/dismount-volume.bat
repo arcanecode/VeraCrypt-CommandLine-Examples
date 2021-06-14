@@ -14,13 +14,14 @@ REM "C:\Program Files\VeraCrypt\VeraCrypt.exe"
 
 REM ---------------------------------------------------------------------------
 REM Next is the dismount parameter. You pass in the drive letter associated
-REM with the volume to dismount.
+REM with the volume to dismount. As with mounting, the case of the drive
+REM letter does not matter.
 REM
 REM If you omit the drive letter, VeraCrypt will dismount ALL currently
 REM mounted volumes.
 REM ---------------------------------------------------------------------------
 REM
-REM /dismount H
+REM /dismount X
 
 REM ---------------------------------------------------------------------------
 REM We now provide the quit parameter. By default, if you omit it then the
@@ -29,6 +30,22 @@ REM VeraCrypt dialog, something usually desired if you are running a script.
 REM ---------------------------------------------------------------------------
 REM
 REM /quit
+
+REM ---------------------------------------------------------------------------
+REM The next parameter is /silent. By default VeraCrypt will display dialogs
+REM notifying you of its progress, as well as when it is complete.
+REM
+REM In a scripting situation you would normally not want this, so we add the
+REM silent switch to suppress the messages.
+REM
+REM Note this does have one side affect, if there are any errors those too are
+REM also suppressed, so you won't be aware of them.
+REM
+REM Finally, be aware that for silent to work, you must also include the
+REM /quit parameter.
+REM ---------------------------------------------------------------------------
+REM
+REM /silent
 
 REM ---------------------------------------------------------------------------
 REM Finally we provide the force parameter. If some app is accessing the
@@ -48,4 +65,4 @@ REM Here is the full command as a single line, unmounting a specific drive
 REM letter and forcing the dismount no matter what.
 REM ---------------------------------------------------------------------------
 
-"C:\Program Files\VeraCrypt\VeraCrypt.exe" /dismount H /quit /force
+"C:\Program Files\VeraCrypt\VeraCrypt.exe" /dismount X /quit /silent /force
