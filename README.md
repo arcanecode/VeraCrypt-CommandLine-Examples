@@ -2,7 +2,7 @@
 
 ## Overview
 
-The files in this project are to support a series of blog posts on https://arcanecode.com. You can visit the specific posts for full explanation, or look through the comments in the various shell scripts.
+The files in this project are to support a series of blog posts on [https://arcanecode.com](https://arcanecode.com). You can visit the individual posts (links below) for full explanations, or look through the comments in the various shell scripts.
 
 Specifically, they are examples of using VeraCrypt from the command line of various operating systems to create, mount, and dismount VeraCrypt encrypted volumes. Examples are provided for macOS, Windows, and Linux (Ubuntu, although should work on most distros).
 
@@ -10,7 +10,13 @@ Please note the examples cover the basics of VeraCrypt. More advanced topics suc
 
 ## Links to Posts
 
-Coming soon.
+[VeraCrypt - A Powerful Encryption Utility](https://arcanecode.com/2021/05/24/veracrypt-a-powerful-encryption-utility/)
+[Creating and Using Hidden Contaiers in VeraCrypt](https://arcanecode.com/2021/05/31/creating-and-using-hidden-containers-in-veracrypt/)
+[VeraCrypt on the Command Line for macOS](https://arcanecode.com/2021/06/07/3504/)
+[VeraCrypt on the Command Line for Windows](https://arcanecode.com/2021/06/14/veracrypt-on-the-command-line-for-windows/)
+
+Coming soon:
+VeraCrypt on the Command Line for Linux
 
 ---
 

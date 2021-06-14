@@ -2,9 +2,10 @@
 
 ## Overview
 
-This folder contains shell scripts you can use as a template for writing your own scripts to control VeraCrypt.
+This folder contains shell scripts you can use as a template for writing your own scripts to control VeraCrypt. You'll find the blog post that describes these files at [https://arcanecode.com/2021/06/07/3504/](https://arcanecode.com/2021/06/07/3504/). Alteratively, a copy has been placed in the [post.md](post.md) file in this folder.
 
 Each script is well documented with all of its parameters. When doing a code review, I'd suggest reading in this order:
+
 1. create-volume.sh
 1. mount-volume.sh
 1. list-volumes.sh
