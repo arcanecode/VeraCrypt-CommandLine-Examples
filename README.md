@@ -10,12 +10,18 @@ Please note the examples cover the basics of VeraCrypt. More advanced topics suc
 
 ## Links to Posts
 
+Below are links to the individual VeraCrypt related posts at ArcaneCode.com. The list will be updated as new  posts are added to the series.
+
 [VeraCrypt - A Powerful Encryption Utility](https://arcanecode.com/2021/05/24/veracrypt-a-powerful-encryption-utility/)
+
 [Creating and Using Hidden Contaiers in VeraCrypt](https://arcanecode.com/2021/05/31/creating-and-using-hidden-containers-in-veracrypt/)
+
 [VeraCrypt on the Command Line for macOS](https://arcanecode.com/2021/06/07/3504/)
+
 [VeraCrypt on the Command Line for Windows](https://arcanecode.com/2021/06/14/veracrypt-on-the-command-line-for-windows/)
 
 Coming soon:
+
 VeraCrypt on the Command Line for Linux
 
 ---
