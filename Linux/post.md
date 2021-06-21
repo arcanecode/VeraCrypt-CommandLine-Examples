@@ -10,7 +10,7 @@ As I stated in previous posts, the command line syntax is a bit different for al
 
 ## Prerequisites
 
-Before you install VeraCrypt, you should be aware it has a dependancy on the libwxgtk3.0-gtk3-0v5 library, so we might as well install that first. From the terminal execute these commands.
+Before you install VeraCrypt, you should be aware it has a dependency on the libwxgtk3.0-gtk3-0v5 library, so we might as well install that first. From the terminal execute these commands.
 
 ```bash
 sudo apt-get update -y
@@ -20,7 +20,7 @@ sudo apt-get install -y libwxgtk3.0-gtk3-0v5
 Next, in order to format a volume as exFat so it can be used across platforms, you'll need to install the exFat tools.
 
 ```bash
-sudp apt-get install -y exfat-fuse exfat-utils
+sudo apt-get install -y exfat-fuse exfat-utils
 ```
 
 Now you'll need to install VeraCrypt. I went to [https://veracrypt.fr/en/Downloads.html](https://veracrypt.fr/en/Downloads.html) and scrolled down to the Linux area. In the Ubuntu 20.04 area, I downloaded `veracrypt-1.24-Update7-Ubuntu-20.04-amd64.deb` file into my Downloads folder.
@@ -115,7 +115,7 @@ In order to keep this container portable across other OS's (Windows and macOS) w
 --filesystem exfat
 ```
 
-The PIM is a special number that allows you to specify the number of times hashing algorithm executes. It's a bit more complex than that, if you want full details see the VeraCrypt documentation.
+The PIM is a special number that allows you to specify the number of times hashing algorithm executes. It's a bit more complex than that, if you want full details see the [VeraCrypt documentation](https://documentation.help/VeraCrypt/Personal%20Iterations%20Multiplier%20(PIM).html).
 
 For now, we can pass it the value of 0 (zero), which tells it to use the default value for the PIM.
 
@@ -182,8 +182,12 @@ Placing these in the `/media` area is a common practice. From there you can name
 Then in your script, you can use:
 
 ```bash
---mount vctest.vc /vc2
+--mount vctest.vc /media/vc2
 ```
+
+Note that once you create the directory under /media it is persistent, you don't have to create it again. This does mean your '/media' will accumulate these mount points over time. Once you are sure you'll no longer need them consider using `rmdir` to remove them.
+
+You could of course use /media for all your volumes, and avoid using /mnt completely. Just be aware you'll have to create a name under /media first.
 
 Next is our "super secure" password. If your password has spaces, you'll need to wrap this in double quote marks.
 
