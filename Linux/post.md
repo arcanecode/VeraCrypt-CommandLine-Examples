@@ -195,7 +195,7 @@ Next is our "super secure" password. If your password has spaces, you'll need to
 --password MySuperSecurePassword1!
 ```
 
-If you overrode the default PIM when creating your volume, you'll need to provide it. Otherwise, we can pass it the value of 0 (zero), which tells it to use the default value
+If you overrode the default PIM when creating your volume, you'll need to provide it. Otherwise, we can pass it the value of 0 (zero), which tells it to use the default value.
 
 ```bash
 --pim 0
@@ -286,6 +286,12 @@ Be aware there is no requirement to load slots in sequential order. Your first m
 sudo veracrypt --text --dismount /mnt
 ```
 
+Or if you created it under `/media`, it might look like:
+
+```bash
+sudo veracrypt --text --dismount /media/vc2
+```
+
 Using the volume list command or looking at the "Mount Directory" column in the GUI, you can pass in that value to dismount. Because you may not always use /mnt to mount, it can be of an issue trying to be reliable in dismounting the right volume.
 
 ### Method 3: Volume File Name
@@ -320,7 +326,7 @@ sudo veracrypt --text --dismount
 
 If you use just the `--dismount` parameter, and pass in no values, then VeraCrypt will attempt to dismount ALL volumes you have loaded.
 
-This can be a useful command to run when you're shutting down your Mac, to ensure all volumes are properly shutdown.
+This can be a useful command to run when you're shutting down your computer, to ensure all volumes are properly shutdown.
 
 If you don't have any volumes mounted, then VeraCrypt basically shrugs it's shoulders, does nothing, and ends.
 
